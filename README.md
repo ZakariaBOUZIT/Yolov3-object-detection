@@ -1,19 +1,20 @@
 # Yolov3-object-detection
 You only look once (YOLO) is a state-of-the-art, real-time object detection system.
 
+YOLO is a clever convolutional neural network (CNN) for doing object detection in real-time. The algorithm applies a single neural network to the full image, and then divides the image into regions and predicts bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities.
+
 Yolo website : https://pjreddie.com/darknet/yolo/
 
 >How It Works
 
 Prior detection systems repurpose classifiers or localizers to perform detection. They apply the model to an image at multiple locations and scales. High scoring regions of the image are considered detections.
 
-We use a totally different approach. We apply a single neural network to the full image. This network divides the image into regions and predicts bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities.
+Yolo use a totally different approach. it applies a single neural network to the full image. This network divides the image into regions and predicts bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities.
 
 >What i have done ?
 
-Yolo has gained a lot of popularity over the years since it is a real time detection method. This means that not only we will be able to classify an object but we will also locate it and extract the bounding box enclosing that object.
+in this notebook i used one of the easiest method to use the Yolo v3 model since it does not require an installations other than opencv . We will use the configuration and weights files provided by the author on the darknet website.
 
-This is one of the easiest method since it does not require an installations other than opencv. We will use the configuration and weights files provided by the author on the darknet website.
 ______________________________________________________________________________________________________________________________________________________________________________
 # Read Coco Names
 
