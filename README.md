@@ -11,9 +11,11 @@ Prior detection systems repurpose classifiers or localizers to perform detection
 
 Yolo use a totally different approach. it applies a single neural network to the full image. This network divides the image into regions and predicts bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities.
 
+![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/cap.PNG)
+
 >What i have done ?
 
-in this notebook i used one of the easiest method to use the Yolo v3 model since it does not require an installations other than opencv . We will use the configuration and weights files provided by the author on the darknet website.
+in this notebook i have used one of the easiest method to implement the Yolo v3 model since it does not require an installations other than opencv . I have used the configuration architectur and weights files provided by the author on the darknet website.
 
 ______________________________________________________________________________________________________________________________________________________________________________
 # Read Coco Names
@@ -26,7 +28,7 @@ First i will load the yolo3 model. Since it was trained on the coco dateset i wi
 
 Any model has two main components. One is the Architecture and the other is weights. For yolo3 we have separate files for both. So we will import the configuration file that has the architecture and the weights file that contains the weights.
 
-On the Yolo website we can find different cfg and weight files. You try these and see which fits your needs the best. In my opinion 320 is the best trade off between speed and accuracy.
+On the Yolo website we can find different cfg and weight files.I think 320 is the best trade off between speed and accuracy.
 
 we can load our model using the readNetFromDarkNet function. We will also set the backend to openCV and the target to CPU.
 
@@ -74,7 +76,9 @@ As we know that each detection/box contains 85 values of which first 4 are cx,cy
 
 Not that we have the confidence value we can filter it. So we will add the confidence threshold. So if the confidence is grater than this, then only it will qualify as an object detected. Then we can get the pixel values of the x,y,w,h. To get pixel value we can simply multiply it with the width and height respectively. Note that we will use x,y which is the origin rather than cx,cy which is the center point. Lastly we will append the values to the corresponding lists.
 
-# Non Maximum Suppression
+# Non Maximum Suppression(NMS)
+
+Yolo uses NMS to only keeps the best bounding boxex.
 
 At this point we can pretty much draw the bounding boxes and call it a day. But sometimes what happens is that more than one box points to the same object. In this case, instead of one detection we would have 2 detections, even though in reality we just have one object. An example of this is shown below.
 
