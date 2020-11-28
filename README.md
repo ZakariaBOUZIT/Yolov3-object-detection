@@ -11,7 +11,7 @@ Prior detection systems repurpose classifiers or localizers to perform detection
 
 Yolo use a totally different approach. it applies a single neural network to the full image. This network divides the image into regions and predicts bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities.
 
-![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/cap.PNG)
+![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/readme/cap.PNG)
 
 What i have done ?
 
