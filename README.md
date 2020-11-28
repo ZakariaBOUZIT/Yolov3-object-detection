@@ -13,7 +13,7 @@ Yolo use a totally different approach. it applies a single neural network to the
 
 ![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/cap.PNG)
 
->What i have done ?
+What i have done ?
 
 in this notebook i have used one of the easiest method to implement the Yolo v3 model since it does not require an installations other than opencv . I have used the configuration architectur and weights files provided by the author on the darknet website.
 
