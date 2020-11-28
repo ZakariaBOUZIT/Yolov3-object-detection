@@ -5,7 +5,7 @@ YOLO is a clever convolutional neural network (CNN) for doing object detection i
 
 Yolo website : https://pjreddie.com/darknet/yolo/
 
->How It Works
+How It Works:
 
 Prior detection systems repurpose classifiers or localizers to perform detection. They apply the model to an image at multiple locations and scales. High scoring regions of the image are considered detections.
 
