@@ -22,7 +22,7 @@ ________________________________________________________________________________
 
 First i will load the yolo3 model. Since it was trained on the coco dateset i will first collect the names of our classes. This can be imported from the coco.names file.  
 
-![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/Capture.PNG)
+![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/readme/Capture.PNG)
 
 # Load the model files
 
@@ -41,7 +41,7 @@ Now based on which image size we used when we downloaded the cfg and weight file
 # Get Output of Network
 Since the Yolo3 Architecture has 3 output layers we have to find their names so we can get their outputs.
 
-![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/yolo%203%20structure.jpg)
+![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/readme/yolo%203%20structure.jpg)
 
 To get the names we can use the getLayerNames fucnction. This returns all the names, but what we need are the names of only the output layers. So we can use the getUnconnectedOutLayers function which returns the indices of the output layers. Now we can simply use these indices to find the names from our layersNames list. Since we use 0 as the first element we have to subtract 1 from the indices we get form the getUnconnectedOutLayers function.
 
@@ -58,7 +58,7 @@ Here the 300, 1200, and the 4800 are the number of boxes we get from the respect
 The fifth value is the confidence which tells us how likely is it that we have an object in this box. The rest of the 80 values correspond to each class confidence. So if there was a car in the image then, 5 + 3 = 8th element would show a high confidence value e.g. 0.7 (car is the 3rd element in the list of coco names).
 
 
-![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/outputs.PNG)
+![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/readme/outputs.PNG)
 
 
 
