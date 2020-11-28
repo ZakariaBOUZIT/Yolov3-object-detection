@@ -11,7 +11,7 @@ Prior detection systems repurpose classifiers or localizers to perform detection
 
 Yolo use a totally different approach. it applies a single neural network to the full image. This network divides the image into regions and predicts bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities.
 
-![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/readme/cap.PNG)
+![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/readme/cap.png)
 
 What i have done ?
 
@@ -58,7 +58,7 @@ Here the 300, 1200, and the 4800 are the number of boxes we get from the respect
 The fifth value is the confidence which tells us how likely is it that we have an object in this box. The rest of the 80 values correspond to each class confidence. So if there was a car in the image then, 5 + 3 = 8th element would show a high confidence value e.g. 0.7 (car is the 3rd element in the list of coco names).
 
 
-![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/readme/outputs.PNG)
+![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/readme/outputs.png)
 
 
 
