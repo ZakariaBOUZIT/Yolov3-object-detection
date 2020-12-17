@@ -1,6 +1,10 @@
 # Yolov3-object-detection
 You only look once (YOLO) is a state-of-the-art, real-time object detection system.
 
+![](https://raw.githubusercontent.com/zackq88/Yolov3-object-detection/master/resultat.gif)
+
+
+
 YOLO is a clever convolutional neural network (CNN) for doing object detection in real-time. The algorithm applies a single neural network to the full image, and then divides the image into regions and predicts bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities.
 
 Yolo website : https://pjreddie.com/darknet/yolo/
